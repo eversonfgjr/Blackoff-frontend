@@ -1,14 +1,26 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Pag Menos
     </ion-title>
+    <ion-searchbar></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+<ion-content padding>
+  <ion-list>
+    <!-- <app-recipe-item *ngFor="let recipe of recipes" [recipeItem]="recipe"></app-recipe-item> -->
+    <ion-row>
+      <ion-item *ngFor="let item of items">
+       <ion-col size="12">
+            <ion-img [src]="item.imageUrl"></ion-img>
+            <h3>{{ item.titulo }}</h3>
+            <p>R$ {{ item.preco }}</p>
+        </ion-col> 
+        <!-- <ion-col size="6">
+            <ion-button>Comprar</ion-button>
+        </ion-col> -->
+       </ion-item>
+    </ion-row>
+  </ion-list>
 </ion-content>
