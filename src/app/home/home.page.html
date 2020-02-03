@@ -1,26 +1,29 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Pag Menos
-    </ion-title>
-    <ion-searchbar></ion-searchbar>
-  </ion-toolbar>
-</ion-header>
-
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Pag Menos
+      </ion-title>
+      <ion-searchbar></ion-searchbar>
+    </ion-toolbar>
+  </ion-header>
+  
 <ion-content padding>
   <ion-list>
     <!-- <app-recipe-item *ngFor="let recipe of recipes" [recipeItem]="recipe"></app-recipe-item> -->
-    <ion-row>
-      <ion-item *ngFor="let item of items">
-       <ion-col size="12">
-            <ion-img [src]="item.imageUrl"></ion-img>
-            <h3>{{ item.titulo }}</h3>
-            <p>R$ {{ item.preco }}</p>
-        </ion-col> 
-        <!-- <ion-col size="6">
-            <ion-button>Comprar</ion-button>
-        </ion-col> -->
-       </ion-item>
-    </ion-row>
+    <ion-grid>
+      <ion-row>
+        <ion-item *ngFor="let item of items">
+         <ion-col size="12">
+              <ion-img [src]="item.imageUrl"></ion-img>
+              <h3>{{ item.titulo }}</h3>
+              <p><small>Menor preço:</small>R$ {{ item.preco }}</p>
+              <ion-button>Comprar</ion-button>
+          </ion-col> 
+          <!-- <ion-col size="6">
+              <ion-button>Comprar</ion-button>
+          </ion-col> -->
+         </ion-item>
+      </ion-row>
+    </ion-grid>
   </ion-list>
 </ion-content>
